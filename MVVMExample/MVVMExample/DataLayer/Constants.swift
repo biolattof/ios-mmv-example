@@ -15,6 +15,6 @@ struct Constants {
     }
     
     struct Endpoints {
-        static let urlListPopularMovies = ""
+        static let urlListPopularMovies = Constants.URL.main + ""
     }
 }

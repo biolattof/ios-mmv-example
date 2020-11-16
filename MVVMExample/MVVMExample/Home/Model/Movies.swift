@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Movies {
-    let listOfMovies = [Movie]
+struct Movies: Codable {
+    let listOfMovies: [Movie]
     
-    enum CodingKeys: String, CodingKeys {
+    enum CodingKeys: String, CodingKey {
         case listOfMovies = "results"
     }
 }
@@ -26,7 +26,7 @@ struct Movie: Codable {
     let releaseDate: String
     let imageUrl: String
     
-    enum CodingKeys: String, CodingKeys {
+    enum CodingKeys: String, CodingKey {
         case id
         case title
         case popularity
